@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+
+  <div class="age-calculator-container">
+
+    <section>
+      <form name="myForm">
+        <div class="row g-0 input-row">
+          <div class="col-lg-4 input-col">
+            <label for="" class="input-label">Day</label>
+            <input type="text" class="input-field" name="day">
+          </div>
+          <div class="col-lg-4 input-col">
+            <label for="" class="input-label">Month</label>
+            <input type="text" class="input-field">
+          </div>
+          <div class="col-lg-4 input-col">
+            <label for="" class="input-label">Year</label>
+            <input type="text" class="input-field">
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <div class="row g-0 hr-separator">
+        <div class="col-lg-10">
+          <hr style="margin-top: 3.2rem;">
+        </div>
+        <div class="col-lg-2">
+          <div class="icon-container" onclick="validateFormFields()">
+            <svg class="svg-icon" width="100%" height="100%">
+              <use href="./assets/images/icon-arrow.svg#separator-line"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="row g-0">
+        <div class="col-12 age-display">
+          <span>--</span>
+          <p>years</p>
+        </div>
+        <div class="col-12 age-display">
+          <span>--</span>
+          <p>moths</p>
+        </div>
+        <div class="col-12 age-display">
+          <span>--</span>
+          <p>days</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="attribute-container">
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+        href="https://github.com/BotInterpreters">John Ericson Dulay</a>.
+    </div>
+  </div>
+
+  <script>
+
+    function validateFormFields(){
+
+      let x = document.forms['myForm']['day'].value;
+      if(x == ""){
+        alert("Please fill in day")
+        return false
+      }
+
+      // alert("Please fill")
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
