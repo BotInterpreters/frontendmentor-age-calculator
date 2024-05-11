@@ -24,17 +24,21 @@
     <section>
       <form name="myForm">
         <div class="row g-0 input-row">
-          <div class="col-lg-4 input-col">
+          <div class="col-lg-3 input-col me-4">
             <label for="" class="input-label">Day</label>
-            <input type="text" class="input-field" name="day">
+            <input type="text" class="input-field" name="day" required placeholder="DD" maxlength="2"
+              pattern="[0-9]{1,2}">
+              <span class="mt-2 error-message-day"></span>
           </div>
-          <div class="col-lg-4 input-col">
+          <div class="col-lg-3 input-col me-4">
             <label for="" class="input-label">Month</label>
-            <input type="text" class="input-field">
+            <input type="text" class="input-field" name="month" required placeholder="MM" maxlength="2">
+            <span class="mt-2 error-message-month"></span>
           </div>
-          <div class="col-lg-4 input-col">
+          <div class="col-lg-3 input-col me-4">
             <label for="" class="input-label">Year</label>
-            <input type="text" class="input-field">
+            <input type="text" class="input-field" name="year" required placeholder="YY" maxlength="4">
+            <span class="mt-2 error-message-year"></span>
           </div>
         </div>
       </form>
@@ -57,46 +61,35 @@
 
     <section>
       <div class="row g-0">
-        <div class="col-12 age-display">
-          <span>--</span>
-          <p>years</p>
+        <div class="col-6 age-display">
+          <p class="text-year"></p>
+          <span class="span-text">years</span>
         </div>
-        <div class="col-12 age-display">
-          <span>--</span>
-          <p>moths</p>
+      </div>
+      <div class="row g-0">
+        <div class="col-12 month-display">
+          <p class="text-month"></p>
+          <span class="span-text">months</span>
         </div>
-        <div class="col-12 age-display">
-          <span>--</span>
-          <p>days</p>
+      </div>
+      <div class="row g-0">
+        <div class="col-12 day-display">
+          <p class="text-day"></p>
+          <span class="span-text">days</span>
         </div>
       </div>
     </section>
   </div>
 
-  <div class="attribute-container">
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
-        href="https://github.com/BotInterpreters">John Ericson Dulay</a>.
-    </div>
+
+  <div class="attribution text-center mt-5 mb-5">
+    <span class="coded-by-span">Challenge by</span>
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" style="color: hsl(224, 21%, 14%)">Frontend
+      Mentor</a> <span class="coded-by-span"> Coded by, </span><a href="https://github.com/BotInterpreters"
+      class="coded-by-text"> John Ericson Dulay</a>
   </div>
 
-  <script>
-
-    function validateFormFields(){
-
-      let x = document.forms['myForm']['day'].value;
-      if(x == ""){
-        alert("Please fill in day")
-        return false
-      }
-
-      // alert("Please fill")
-
-    }
-
-  </script>
-
+  <script src="script.js"></script>
 
 </body>
 
